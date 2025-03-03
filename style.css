@@ -18,7 +18,7 @@ canvas{
   padding: 0;
   margin: -5px auto; 
   display: flex; 
-  width:1500px; 
+  width: 1500px; 
   height: 700px;
   justify-content: center;
   align-items: center;
@@ -138,7 +138,6 @@ canvas{
       /* Stil khusus untuk versi mobile */
       @media (max-width: 1024px) and (orientation: landscape) {
         html,body { 
-          margin: auto;
           padding: 10px;
           display: flex;
           justify-content: center;
@@ -150,14 +149,16 @@ canvas{
           display: flex;
           justify-content: center;
           align-items: center;
+          padding: 10px;
+          /* margin-top: 0px ; */
         }
 
         canvas{
           padding: 0;
-          margin: -5px auto; 
+          /* margin: -5px auto;  */
           display: flex; 
-          width:790px; 
-          height: 355px;
+          width: 650px; 
+          height: 300px;
           justify-content: center;
           align-items: center;
           border-radius: 15px;
@@ -167,7 +168,8 @@ canvas{
          #movementBtns {
           position: absolute;
           background-color: transparent;
-          margin-top: 120px; 
+          margin-top: 120px;
+          /* display: block;  */
           } .movement-btns button img{
               position: relative;
               background-color: transparent;
@@ -175,10 +177,11 @@ canvas{
               outline: none;
               width: 75px;
               height: 75px;
+              /* display: block;  */
             }
             #upBtn {
               position: absolute;
-              left: -340px;
+              left: -310px;
               background-color: transparent;
               border: none;
             }
@@ -197,18 +200,22 @@ canvas{
 
         /* Tombol menu,refresh,pause/play,music. */
         #menubtn>img, #refresh>img, #pause>img, #musicBg>img {
-          width: 35px;
-          margin-top: -15px;
+          width: 30px;
+          margin-top: 15px;
+          position: absolute;
           height: auto;
           background-color: transparent;
-        } #refresh {
-            left: 70px;
+        } #menubtn{
+            left: 60px;
+          }
+          #refresh {
+            left: 90px;
           }
           #pause {
-            left: 105px;
+            left: 120px;
           }
           #musicBg {
-            left: 140px;
+            left: 150px;
           }
 
         /* Popup Menu */

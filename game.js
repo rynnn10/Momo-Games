@@ -38,8 +38,11 @@ function startScreen() {
 	soundButton.style.display = "block";
 	infoButton.style.display = "block";
 	menuBtn.style.display = "block";
-	movementBtns.style.display = "none";
-
+	if (window.matchMedia("(max-width: 1024px) and (orientation: landscape)").matches) {
+		movementBtns.style.display = "block";
+	   } else {
+		 movementBtns.style.display = "none";
+	   }
 	hapusLayar("#67d2d6");
 	tampilkanGambar(dataGambar.logo, 600, 250);
 	var startBtn = tombol(dataGambar.startBtn, 600, 350);
@@ -50,11 +53,16 @@ function startScreen() {
   }
   
   function halamanCover() {
-	pauseButton.style.display = "none";
-	refreshButton.style.display = "none";
-	soundButton.style.display = "none";
-	infoButton.style.display = "none";
-	menuBtn.style.display = "none";
+	pauseButton.style.display = "block";
+	refreshButton.style.display = "block";
+	soundButton.style.display = "block";
+	infoButton.style.display = "block";
+	menuBtn.style.display = "block";
+	// if (window.matchMedia("(max-width: 1024px) and (orientation: landscape)").matches) {
+	// 	movementBtns.style.display = "block";
+	//    } else {
+	// 	 movementBtns.style.display = "none";
+	//    }
 
 	hapusLayar("#67d2d6");
 	gambarFull(dataGambar.cover);
@@ -169,7 +177,7 @@ function gameLoop(){
 	teks(game.score, 600, 50);
 	cekItem();
   }
- 	// resizeBtn(1150, 50);
+ 	resizeBtn(1150, 50);
 }
 
 function cekItem() {
